@@ -1,46 +1,68 @@
 import React from "react";
 import appLogo from "./assets/react.svg";
 
-function Task() {
-    // Ejemplo de estilo en línea
-    const taskHeaderStyles = { color: "red", fontSize: "1.5rem" };
-
+function Task({
+    taskName,
+    description,
+    dueDate,
+    isCompleted,
+    titleStyle = { color: "red", fontSize: "1.5rem" },
+}) {
     return (
         <div className="box">
             <div className="columns is-vcentered">
                 <div className="column is-narrow">
-                    <input type="checkbox" className="checkbox" />
+                    <input
+                        type="checkbox"
+                        className="checkbox"
+                        defaultChecked={isCompleted}
+                    />
                 </div>
                 <div className="column">
                     {/*Aplicación de estilo en línea mediante objetos*/}
-                    <p style={taskHeaderStyles}>
-                        <strong>Título de la tarea </strong>
-                        <small>3 de Junio de 2021</small>
+                    <p style={titleStyle}>
+                        <strong>{taskName} </strong>
+                        <small>{dueDate}</small>
                     </p>
                 </div>
             </div>
-            <p>
-                Descripción de la tarea: Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nulla nec purus feugiat, molestie ipsum et,
-                consequat nibh. Etiam non nisi sit amet purus ultricies semper
-                at a nunc. Fusce auctor, justo et facilisis ultrices, felis
-                turpis posuere justo, nec iaculis risus dolor in ex.
-            </p>
+            <p>{description}</p>
         </div>
     );
 }
 
 function TaskList() {
     const styles = "section container";
-    /*Comentario*/
-    //Comentario
+
+    const tasks = [
+        {
+            taskName: "TP 1.1 - Corrección",
+            description:
+                "Pasar las notas procesadas de ambas comisiones al trabajo práctico 1.1",
+            dueDate: new Date("06-07-2024").toDateString(),
+            isCompleted: false,
+        },
+        {
+            taskName: "Responder mails",
+            description: "Responder mails del correo de programacion3",
+            dueDate: new Date("06-10-2024").toDateString(),
+            isCompleted: false,
+        },
+    ];
+
     return (
         <div className={styles}>
             {/*El componente tiene un título y una lista estática de Task components*/}
             <h1 className="title">Lista de tareas</h1>
-            <Task />
-            <Task />
-            <Task />
+            {tasks.map((task) => (
+                <Task
+                    taskName={task.taskName}
+                    description={task.description}
+                    dueDate={task.dueDate}
+                    isCompleted={task.isCompleted}
+                    key={task.taskName}
+                />
+            ))}
         </div>
     );
 }
