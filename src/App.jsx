@@ -1,71 +1,7 @@
 import React from "react";
 import appLogo from "./assets/react.svg";
 
-function Task({
-    taskName,
-    description,
-    dueDate,
-    isCompleted,
-    titleStyle = { color: "red", fontSize: "1.5rem" },
-}) {
-    return (
-        <div className="box">
-            <div className="columns is-vcentered">
-                <div className="column is-narrow">
-                    <input
-                        type="checkbox"
-                        className="checkbox"
-                        defaultChecked={isCompleted}
-                    />
-                </div>
-                <div className="column">
-                    {/*Aplicación de estilo en línea mediante objetos*/}
-                    <p style={titleStyle}>
-                        <strong>{taskName} </strong>
-                        <small>{dueDate}</small>
-                    </p>
-                </div>
-            </div>
-            <p>{description}</p>
-        </div>
-    );
-}
-
-function TaskList() {
-    const styles = "section container";
-
-    const tasks = [
-        {
-            taskName: "TP 1.1 - Corrección",
-            description:
-                "Pasar las notas procesadas de ambas comisiones al trabajo práctico 1.1",
-            dueDate: new Date("06-07-2024").toDateString(),
-            isCompleted: false,
-        },
-        {
-            taskName: "Responder mails",
-            description: "Responder mails del correo de programacion3",
-            dueDate: new Date("06-10-2024").toDateString(),
-            isCompleted: false,
-        },
-    ];
-
-    return (
-        <div className={styles}>
-            {/*El componente tiene un título y una lista estática de Task components*/}
-            <h1 className="title">Lista de tareas</h1>
-            {tasks.map((task) => (
-                <Task
-                    taskName={task.taskName}
-                    description={task.description}
-                    dueDate={task.dueDate}
-                    isCompleted={task.isCompleted}
-                    key={task.taskName}
-                />
-            ))}
-        </div>
-    );
-}
+import { TaskList } from "./components/Task";
 
 function FooterBar() {
     return (
@@ -137,7 +73,7 @@ function App() {
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
             <div className="container">
-                <TaskList />
+                <TaskList listName="Tareas de Programación 3" />
             </div>
             <FooterBar />
         </div>
