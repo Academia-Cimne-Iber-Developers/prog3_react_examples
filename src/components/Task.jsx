@@ -1,3 +1,5 @@
+import tasksData from "../assets/tasks.json";
+
 function Task({
     taskName,
     description,
@@ -31,27 +33,28 @@ function Task({
 function TaskList({ listName = "Lista de tareas" }) {
     const styles = "section container";
 
-    const tasksList = [
-        {
-            taskName: "TP 1.1 - Corrección",
-            description:
-                "Pasar las notas procesadas de ambas comisiones al trabajo práctico 1.1",
-            dueDate: "06-07-2024",
-            isCompleted: false,
-        },
-        {
-            taskName: "Responder mails",
-            description: "Responder mails del correo de programacion3",
-            dueDate: "06-10-2024",
-            isCompleted: false,
-        },
-    ];
+    // No podemos usar fetch para resolver el problema sin emplear un hook
+    // para gestionar el estado de este componente
+
+    // const tasks = fetch("tasks.json")
+    //     .then((response) => {
+    //         console.log(response);
+    //         return response.json();
+    //     })
+    //     .then((data) => {
+    //         console.log(data);
+    //         return data;
+    //     });
+
+    // console.log(tasks);
+
+    const tasks = tasksData;
 
     return (
         <div className={styles}>
             {/*El componente tiene un título y una lista estática de Task components*/}
             <h1 className="title">{listName}</h1>
-            {tasksList.map((task) => (
+            {tasks.map((task) => (
                 <Task
                     taskName={task.taskName}
                     description={task.description}
