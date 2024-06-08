@@ -2,6 +2,7 @@ import React from "react";
 import appLogo from "./assets/react.svg";
 
 import { TaskList } from "./components/Task";
+import { ShoppingList } from "./components/ShoppingList";
 
 function FooterBar() {
     return (
@@ -73,7 +74,7 @@ function App() {
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
             <div className="container">
-                <TaskList listName="Tareas de Programación 3" />
+                <ShoppingList />
             </div>
             <FooterBar />
         </div>
