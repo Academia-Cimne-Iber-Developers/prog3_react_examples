@@ -2,6 +2,10 @@ import React from "react";
 import appLogo from "./assets/react.svg";
 
 import { TaskList } from "./components/Task";
+import { ShoppingList } from "./components/ShoppingList";
+import { AlertButton } from "./components/AlertButton";
+import WarningButton from "./components/WarningButton";
+import ErrorButton from "./components/ErrorButton";
 
 function FooterBar() {
     return (
@@ -69,11 +73,37 @@ function NavBar() {
 }
 
 function App() {
+    function handleClick() {
+        alert("Mensaje del componente App");
+    }
+
     return (
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
             <div className="container">
-                <TaskList listName="Tareas de Programación 3" />
+                {/* <ShoppingList /> */}
+                <div
+                    style={{ border: "1px solid white" }}
+                    onClick={handleClick}
+                >
+                    <WarningButton
+                        message="Primer botón"
+                        buttonText="Butón compuesto 1"
+                    />
+                    <br />
+                    <WarningButton
+                        message="Segundo botón"
+                        buttonText="Butón compuesto 2"
+                    />
+                </div>
+                <WarningButton
+                    message="Tercer botón"
+                    buttonText="Butón independiente"
+                />
+                {/* <ErrorButton
+                    message="Componente de error"
+                    buttonText="Butón de error"
+                /> */}
             </div>
             <FooterBar />
         </div>

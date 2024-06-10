@@ -1,0 +1,22 @@
+[
+    {
+        "itemName": "Leche descremada",
+        "isBought": false,
+        "isPriority": true
+    },
+    {
+        "itemName": "Manteca 100gr",
+        "isBought": true,
+        "isPriority": true
+    },
+    {
+        "itemName": "Huevos 6",
+        "isBought": false,
+        "isPriority": true
+    },
+    {
+        "itemName": "Alfajor de chocolate",
+        "isBought": false,
+        "isPriority": false
+    }
+]
