@@ -3,6 +3,8 @@ import appLogo from "./assets/react.svg";
 
 import { TaskList } from "./components/Task";
 import { ShoppingList } from "./components/ShoppingList";
+import { AlertButton } from "./components/AlertButton";
+import WarningButton from "./components/WarningButton";
 
 function FooterBar() {
     return (
@@ -74,7 +76,8 @@ function App() {
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
             <div className="container">
-                <ShoppingList />
+                {/* <ShoppingList /> */}
+                <WarningButton message="Saludos comisión CN" />
             </div>
             <FooterBar />
         </div>
