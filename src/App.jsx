@@ -76,6 +76,7 @@ function App() {
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
             <div className="container">
+                {/* <ShoppingList /> */}
                 <WarningButton message="Saludos comisión CN" />
             </div>
             <FooterBar />
