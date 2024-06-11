@@ -6,6 +6,7 @@ import { ShoppingList } from "./components/ShoppingList";
 import { AlertButton } from "./components/AlertButton";
 import WarningButton from "./components/WarningButton";
 import ErrorButton from "./components/ErrorButton";
+import Counter from "./components/Counter";
 
 function FooterBar() {
     return (
@@ -82,7 +83,7 @@ function App() {
             <NavBar />
             <div className="container">
                 {/* <ShoppingList /> */}
-                <div
+                {/* <div
                     style={{ border: "1px solid white" }}
                     onClick={handleClick}
                 >
@@ -99,11 +100,13 @@ function App() {
                 <WarningButton
                     message="Tercer botón"
                     buttonText="Butón independiente"
-                />
+                /> */}
                 {/* <ErrorButton
                     message="Componente de error"
                     buttonText="Butón de error"
                 /> */}
+                {/* <Counter initialValue={0} /> */}
+                <TaskList />
             </div>
             <FooterBar />
         </div>
