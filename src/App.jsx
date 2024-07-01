@@ -1,6 +1,7 @@
 import React from "react";
 import appLogo from "./assets/react.svg";
 
+<<<<<<< HEAD
 function Task() {title, descripcion, dueDate, isC 
     // Ejemplo de estilo en línea
     const taskHeaderStyles = { color: "red", fontSize: "1.5rem" };
@@ -44,6 +45,14 @@ function TaskList() {
         </div>
     );
 }
+=======
+import { TaskList } from "./components/Task";
+import { ShoppingList } from "./components/ShoppingList";
+import { AlertButton } from "./components/AlertButton";
+import WarningButton from "./components/WarningButton";
+import ErrorButton from "./components/ErrorButton";
+import Counter from "./components/Counter";
+>>>>>>> 7630faddf5dcbbc2614260307fdd9da7890746d5
 
 function FooterBar() {
     return (
@@ -111,10 +120,38 @@ function NavBar() {
 }
 
 function App() {
+    function handleClick() {
+        alert("Mensaje del componente App");
+    }
+
     return (
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
             <div className="container">
+                {/* <ShoppingList /> */}
+                {/* <div
+                    style={{ border: "1px solid white" }}
+                    onClick={handleClick}
+                >
+                    <WarningButton
+                        message="Primer botón"
+                        buttonText="Butón compuesto 1"
+                    />
+                    <br />
+                    <WarningButton
+                        message="Segundo botón"
+                        buttonText="Butón compuesto 2"
+                    />
+                </div>
+                <WarningButton
+                    message="Tercer botón"
+                    buttonText="Butón independiente"
+                /> */}
+                {/* <ErrorButton
+                    message="Componente de error"
+                    buttonText="Butón de error"
+                /> */}
+                {/* <Counter initialValue={0} /> */}
                 <TaskList />
             </div>
             <FooterBar />

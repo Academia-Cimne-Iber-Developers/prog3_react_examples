@@ -1,0 +1,26 @@
+[
+    {
+        "taskName": "TP 1.1 - Corrección",
+        "description": "Pasar las notas procesadas de ambas comisiones al trabajo práctico 1.1",
+        "dueDate": "06-07-2024",
+        "isCompleted": false
+    },
+    {
+        "taskName": "Responder mails",
+        "description": "Responder mails del correo de programacion3",
+        "dueDate": "06-10-2024",
+        "isCompleted": false
+    },
+    {
+        "taskName": "TP 2.1 - Corrección",
+        "description": "Revisar los repositorios de los alumnos y corregir el trabajo práctico 2.1",
+        "dueDate": "06-15-2024",
+        "isCompleted": false
+    },
+    {
+        "taskName": "Tarea arbitraria",
+        "description": "Hacer algo que no sea programación",
+        "dueDate": "06-20-2024",
+        "isCompleted": true
+    }
+]
