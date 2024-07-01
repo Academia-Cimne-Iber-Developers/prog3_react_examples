@@ -1,7 +1,7 @@
 import React from "react";
 import appLogo from "./assets/react.svg";
 
-function Task() {
+function Task() {title, descripcion, dueDate, isC 
     // Ejemplo de estilo en línea
     const taskHeaderStyles = { color: "red", fontSize: "1.5rem" };
 
