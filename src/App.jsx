@@ -52,7 +52,6 @@ import { AlertButton } from "./components/AlertButton";
 import WarningButton from "./components/WarningButton";
 import ErrorButton from "./components/ErrorButton";
 import Counter from "./components/Counter";
->>>>>>> 7630faddf5dcbbc2614260307fdd9da7890746d5
 
 function FooterBar() {
     return (
@@ -152,7 +151,9 @@ function App() {
                     buttonText="Butón de error"
                 /> */}
                 {/* <Counter initialValue={0} /> */}
-                <TaskList />
+                {/* <TaskList /> */}
+                <Post postID={1000} />
+                <Post postID={15} />
             </div>
             <FooterBar />
         </div>
