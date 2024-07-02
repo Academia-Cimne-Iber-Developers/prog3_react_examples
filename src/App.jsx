@@ -12,6 +12,7 @@ import Post from "./components/Post";
 import ThemeChanger from "./components/ThemeChanger";
 
 import FooterBar from "./components/Footerbar";
+import SongList from "./components/MusicPlayer/SongList";
 
 function NavMenu() {
     return (
@@ -91,9 +92,10 @@ function App() {
                 /> */}
                 {/* <Counter initialValue={0} /> */}
                 {/* <TaskList /> */}
-                <Post postID={1000} />
-                <Post postID={15} />
+                {/* <Post postID={1000} />
+                <Post postID={15} /> */}
                 {/* <ThemeChanger /> */}
+                <SongList />
             </div>
             <FooterBar />
         </div>
