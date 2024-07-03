@@ -9,26 +9,10 @@ import ErrorButton from "./components/ErrorButton";
 import Counter from "./components/Counter";
 import Post from "./components/Post";
 
-function FooterBar() {
-    return (
-        <footer className="footer">
-            <div className="content has-text-centered">
-                <div className="content has-text-centered">
-                    <a className="icon" href="https://facebook.com">
-                        <i className="fab fa-facebook"></i>
-                    </a>
-                    <a className="icon" href="https://twitter.com">
-                        <i className="fab fa-twitter"></i>
-                    </a>
-                    <a className="icon" href="https://instagram.com">
-                        <i className="fab fa-instagram"></i>
-                    </a>
-                </div>
-                <p>&copy; 2024 TODO App. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-    );
-}
+import ThemeChanger from "./components/ThemeChanger";
+
+import FooterBar from "./components/Footerbar";
+import SongList from "./components/MusicPlayer/SongList";
 
 function NavMenu() {
     return (
@@ -108,8 +92,10 @@ function App() {
                 /> */}
                 {/* <Counter initialValue={0} /> */}
                 {/* <TaskList /> */}
-                <Post postID={1000} />
-                <Post postID={15} />
+                {/* <Post postID={1000} />
+                <Post postID={15} /> */}
+                {/* <ThemeChanger /> */}
+                <SongList />
             </div>
             <FooterBar />
         </div>
