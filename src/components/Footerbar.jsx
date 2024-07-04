@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import useTheme from "../hooks/useTheme";
+import ThemeContext from "../contexts/ThemeContext";
 
 function FooterBar() {
-    const [theme, toogleTheme] = useTheme();
+    const { theme } = useContext(ThemeContext);
 
     return (
         <footer

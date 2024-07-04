@@ -1,7 +1,9 @@
 import useTheme from "../hooks/useTheme";
+import ThemeContext from "../contexts/ThemeContext";
+import { useContext } from "react";
 
 function ThemeChanger() {
-    const [theme, toggleTheme] = useTheme();
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
         <div
