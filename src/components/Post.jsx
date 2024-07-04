@@ -1,38 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import useFetch from "../hooks/useFetch";
 
 function Post({ postID }) {
-    const [post, setPost] = useState(null);
-    //La siguiente asignación de estado inicial también es válida
-    //const [post, setPost] = useState({ id: postID, title: null, body: null });
-
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        setError(null);
-        setLoading(true);
-
-        fetch(`https://jsonplaceholder.typicode.com/posts/${postID}`)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Error al obtener la respuesta");
-                }
-
-                return response.json();
-            })
-            .then((data) => {
-                setPost({
-                    title: data.title,
-                    body: data.body,
-                    userID: data.userId,
-                });
-                setLoading(false);
-            })
-            .catch((error) => {
-                setLoading(false);
-                setError(error);
-            });
-    }, [postID]);
+    const [post, error, loading] = useFetch(
+        `https://jsonplaceholder.typicode.com/posts/${postID}`
+    );
 
     return (
         <div>
