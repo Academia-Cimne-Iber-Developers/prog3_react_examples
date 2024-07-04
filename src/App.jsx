@@ -1,13 +1,57 @@
 import React from "react";
 import appLogo from "./assets/react.svg";
 
+<<<<<<< HEAD
+function Task() {title, descripcion, dueDate, isC 
+    // Ejemplo de estilo en línea
+    const taskHeaderStyles = { color: "red", fontSize: "1.5rem" };
+
+    return (
+        <div className="box">
+            <div className="columns is-vcentered">
+                <div className="column is-narrow">
+                    <input type="checkbox" className="checkbox" />
+                </div>
+                <div className="column">
+                    {/*Aplicación de estilo en línea mediante objetos*/}
+                    <p style={taskHeaderStyles}>
+                        <strong>Título de la tarea </strong>
+                        <small>3 de Junio de 2021</small>
+                    </p>
+                </div>
+            </div>
+            <p>
+                Descripción de la tarea: Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nulla nec purus feugiat, molestie ipsum et,
+                consequat nibh. Etiam non nisi sit amet purus ultricies semper
+                at a nunc. Fusce auctor, justo et facilisis ultrices, felis
+                turpis posuere justo, nec iaculis risus dolor in ex.
+            </p>
+        </div>
+    );
+}
+
+function TaskList() {
+    const styles = "section container";
+    /*Comentario*/
+    //Comentario
+    return (
+        <div className={styles}>
+            {/*El componente tiene un título y una lista estática de Task components*/}
+            <h1 className="title">Lista de tareas</h1>
+            <Task />
+            <Task />
+            <Task />
+        </div>
+    );
+}
+=======
 import { TaskList } from "./components/Task";
 import { ShoppingList } from "./components/ShoppingList";
 import { AlertButton } from "./components/AlertButton";
 import WarningButton from "./components/WarningButton";
 import ErrorButton from "./components/ErrorButton";
 import Counter from "./components/Counter";
-import Post from "./components/Post";
 
 import ThemeChanger from "./components/ThemeChanger";
 
